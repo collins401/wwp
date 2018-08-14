@@ -1,5 +1,3 @@
-import './css/style.css'
-
 $(function() {
 // DOM Ready
 	$(window).scroll(function(){

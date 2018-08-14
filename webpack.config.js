@@ -5,7 +5,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
-  entry: ['./src/app.js', './src/css/style.css'],
+  entry: {
+    verdor: ['./src/js/jquery.min.js','./src/app.js']
+  },
   output: {
     path: path.resolve(__dirname, 'dist/js/'),
     filename: 'scripts.min.js'
@@ -31,7 +33,7 @@ module.exports = {
       {
         from: path.resolve(__dirname, './src/'),
         to: path.resolve(__dirname, 'dist/'),
-        ignore: [ '*.js', '*.less', '*.css']
+        ignore: [ '*.js','*.less', '*.css']
       }
     ])
   ]
