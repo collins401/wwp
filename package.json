@@ -1,0 +1,39 @@
+{
+  "name": "wwp",
+  "version": "1.0.0",
+  "description": "wordpress themes basic of webpack4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collins401/wwp.git"
+  },
+  "keywords": [
+    "webpack4",
+    "wordpress"
+  ],
+  "author": "deepsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collins401/wwp/issues"
+  },
+  "homepage": "https://github.com/collins401/wwp#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.0.5",
+    "mini-css-extract-plugin": "^0.4.1",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^12.0.0",
+    "postcss-loader": "^3.0.0",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  }
+}

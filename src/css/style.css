@@ -1,0 +1,22 @@
+/*!
+ * Theme Name: wwp
+ * Theme URI: http://blog.bytecats.com
+ * Description: HTML5 Blank WordPress Starter Theme
+ * Version: 1.0.0
+ * Author: deepsky
+ * Author URI: http://blog.bytecats.com
+ * Tags: Blank, HTML5, CSS3
+ *
+ * License: MIT
+ * License URI: http://opensource.org/licenses/mit-license.php
+ */
+
+@import url('./variable.css');
+
+body {
+  color: var(--color);
+  font-size: 12px;
+  margin: 0;
+  margin-top: 20px;
+  transform: translate(0, 50%);
+}
