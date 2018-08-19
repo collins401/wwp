@@ -3,10 +3,11 @@ const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const devMode = process.env.NODE_ENV !== 'production'
 module.exports = {
   entry: {
-    verdor: ['./src/js/jquery.min.js','./src/app.js']
+    main: ['./src/js/jquery.min.js','./src/app.js']
   },
   output: {
     path: path.resolve(__dirname, 'dist/js/'),
@@ -36,5 +37,17 @@ module.exports = {
         ignore: [ '*.js','*.less', '*.css']
       }
     ])
-  ]
+  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            warnings: false,
+            drop_console: true
+          }
+        }
+      })
+    ]
+  }
 }
